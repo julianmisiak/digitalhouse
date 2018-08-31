@@ -1,4 +1,4 @@
-package digitalhospital.com.digitalhouse.acme;
+package acme;
 
 import java.util.ArrayList;
 import java.util.List;

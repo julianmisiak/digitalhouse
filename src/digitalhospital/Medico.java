@@ -1,34 +1,16 @@
 package digitalhospital;
 
-import java.util.ArrayList;
-import java.util.List;
+public class Medico implements Alertable {
+   private Integer id;
+   private String apyn;
 
-public class Medico implements Profesional {
-    private Integer id;
-    private String nombre;
-    private String apellido;
-    List <Medidor> medidores = new ArrayList<>();
-
-    public Medico(Integer id, String nombre, String apellido) {
+    public Medico(Integer id, String apyn) {
         this.id = id;
-        this.nombre = nombre;
-        this.apellido = apellido;
-    }
-
-    public void susscribirMedidor(Medidor medidor){
-        medidor.suscribirMedico(this);
-    }
-
-
-    public Medico(Integer id, String nombre, String apellido, List<Medidor> medidores) {
-        this.id = id;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.medidores = medidores;
+        this.apyn = apyn;
     }
 
     @Override
-    public void recibirMensaje(Medidor medidor) {
-
+    public void recibir(String mensaje) {
+        System.out.println("Soy el médico: " + apyn  + "  el mensaje: "+ mensaje);
     }
 }

@@ -1,4 +1,4 @@
-package digitalhospital.com.digitalhouse.acme;
+package acme;
 
 public class Pasajero {
     private Integer dni;
